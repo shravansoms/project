@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title>Online IDE</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+   
+
+ </div> 
+
+
+
+ <div class="header"><h1 align="center">Online IDE</h1> </div>
+ 
+  <div class="control-panel">
+
+    <tr>
+        &nbsp;
+        &nbsp;
+     <button type="button" class="tool1btn" onclick="savefile"> 
+       <span class="tool1btn--text">Save</span>
+        &nbsp;
+       <span class="tool1btn--icon">
+        <ion-icon name="save"></ion-icon>
+       </span>
+    </button> 
+   
+    &nbsp;
+    &nbsp;
+    <input id="fileInput" type="file" style="display:none;" />
+    <input type="button" button class="tool2btn"  value="Open" onclick="document.getElementById('fileInput').click();"/>
+      <span class="tool2btn--text" value="Open">
+        <span class="tool2btn--icon">
+            <ion-icon name="folder-open"></ion-icon> 
+        </span>
+    </button>
+ 
+  </tr>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+
+  Language:
+        <select id="languages" class="languages" onchange="changeLanguage()">
+            <option value="c"> C </option>
+            <option value="cpp"> C++ </option>
+            <option value="python"> Python </option>
+            <option value="node"> Node JS </option>
+            <option value="php"> PHP </option>
+        </select>
+    </div>
+
+    <div class="editor" id="editor"></div>
+    
+    <div class="button-container">
+        <button type="button" class="btn" onclick="executeCode()"> 
+            <span class="btn">Run</span>
+            <span class="btn--icon">
+            <ion-icon name="play"></ion-icon>
+           </span>
+        </button>  
+      </div>
+<!--load-->
+
+    <div class="output"></div>
+</form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
+    <script src="js/lib/theme-vibrant_ink.js"></script>
+    <script src="js/ide.js"></script>
+   
+    
+</body>
+</html>
